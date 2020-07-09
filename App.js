@@ -31,8 +31,9 @@ export default class App extends React.Component {
     );
   }
 
-  @track((props, state) => ({
-    count: state.count
+  @track((props, state, [event]) => ({
+    count: state.count,
+    event
   }))
   onPress = () => {
     alert('haha');
